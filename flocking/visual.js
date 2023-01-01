@@ -17,7 +17,7 @@ function setup() {
 }
 
 function draw() {
-  background(0);
+  background(170, 170, 170);
 
   for (let boid of flock) {
     boid.edges();
@@ -26,9 +26,6 @@ function draw() {
     boid.show();
   }
 
-
-
-    
 }
 
 function windowResized() {
