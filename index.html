@@ -6,24 +6,234 @@
 
   <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
 
-  <script language="javascript" type="text/javascript" src="flocking/visual.js"></script>
-  <script language="javascript" type="text/javascript" src="flocking/boid.js"></script>
+  <!-- <script language="javascript" type="text/javascript" src="flocking/visual.js"></script> -->
+  <!-- <script language="javascript" type="text/javascript" src="flocking/boid.js"></script> -->
 
 
   <link rel="stylesheet" href="index.css">
 
 </head>
 <body>
-  <p id="title">Rami Wilson</p>
 
-  <div id="projects">
-    <a class="button" href="./projects.html">Projects</a>    
-  </div>
+  <!-- <div class="flex-container" id="header">
+    <div id="title">
+      <b id="first-name">Rami</b>
+      <p id="last-name">Wilson</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt recusandae, corporis, assumenda architecto aliquid molestiae sint fugiat labore nihil officia corrupti earum. Corrupti magnam mollitia aperiam consequatur delectus! Eaque, molestias velit. Cumque nobis fuga animi deserunt architecto! Odio et commodi corporis cupiditate, beatae sequi? Dolore architecto doloremque dolores accusantium a?</p>
+    </div>
 
-  <!-- <div id="resume">
-    <a href="./resume.html">Resume</a>
+    <div id="descriptor">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt corrupti, necessitatibus, aut perspiciatis obcaecati itaque rerum incidunt, quas error fuga praesentium quo quisquam explicabo aspernatur blanditiis magni nobis doloribus repellendus in dignissimos beatae? Aliquam illo debitis aperiam ex optio architecto unde, beatae tenetur tempora sequi, deleniti itaque facilis eius repellendus.</p>
+    </div>
   </div> -->
 
+
+  <div class="header">
+    <div class="title">
+      <p class="first-name">Rami</p>
+      <p class="last-name">Wilson</p>
+    </div>
     
+
+    <div class="descriptor">
+      <h2>Software Developer with an interest in Machine Learning, Graphics, and Music.</h2>
+    </div>
+  </div>
+
+
+
+
+
+  <div id="button-bar">
+    <button id="about-button" onmouseleave="buttonReset('about')" onmouseover="hover('about')" onclick="openTab('about')" style="color: red; box-shadow: inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0">About</button>
+    <button id="projects-button" onmouseleave="buttonReset('projects')" onmouseover="hover('projects')" onclick="openTab('projects')">Projects</button>
+    <button id="resume-button" onmouseleave="buttonReset('resume')" onmouseover="hover('resume')" onclick="openTab('resume')">Resume</button>
+  </div>
+
+  <div id="about" class="tab">
+    <h2>About</h2>
+    <p>I am a computer science major at UC Santa Cruz.</p>
+  </div>
+
+
+  <div id="projects" class="tab" style="display:none">
+    <h2>Projects</h2>
+    <div id="project-list">
+      <div>
+        <h2>Neo-Riemannian Tonnetz Visualization</h2>
+        <p id="project-description">Implemented in p5.js and visualizes P, L, and R transformations on major and minor triads according to Neo-Riemannian theory, visualizing path between non-diatonic triads on dynamically generated grid given any root note</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/tonnetz_js" class="button">GitHub</a>
+          <a href="https://ramiwil.github.io/tonnetz_js/" class="button">Project Link</a>
+        </div>
+        
+      </div>
+  
+  
+      <div>
+        <h2>Connect-4 Minimax / Expectimax Agent</h2>
+        <p id="project-description">Implemented in Python and uses minimax and expectimax to choose the most optimal decision. Optimized to run up to 5-6 levels deep in search tree in reasonable time by use of partial pre-computed heuristics</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/connect-four-ai" class="button">GitHub</a>
+          <!-- <a href="/" class="button">Project Link</a> -->
+        </div>
+      </div>
+  
+      <div>
+        <h2>Haskell Interpreter</h2>
+        <p id="project-description">An evaluator for a subset of the functional programming language Haskell. Supports abstractions, arithmetic evaluation, lambda expressions, etc.</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/Haskell-Nano-Interpreter" class="button">GitHub</a>
+          <!-- <a href="/" class="button">Project Link</a> -->
+        </div>
+      </div>
+  
+      <div>
+        <h2>Three.js Environment</h2>
+        <p id="project-description">A Three JS environment with full controls that puts you in the middle of a fully 3D environment. Includes positional audio, animated 3D models working together simultaneously (GLTF, FBX, etc.), animation, HDRI scanning, cube maps, and 3D scanned models.</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/ThreeJS-StreetRave" class="button">GitHub</a>
+          <a href="https://ramiwil.github.io/ThreeJS-StreetRave/" class="button">Project Link</a>
+        </div>
+      </div>
+  
+      <div>
+        <h2>OpenGL Shader</h2>
+        <p id="project-description">A shader created using OpenGL lighting algorithms. Includes diffuse, specular, and ambient lights, as well as a spotlight. Features a perspective change slider and the lights affect 3 different models to fully see the lighting effects.</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/OpenGL-LightingSample" class="button">GitHub</a>
+          <a href="https://ramiwil.github.io/OpenGL-LightingSample/" class="button">Project Link</a>
+        </div>
+      </div>
+  
+      <div>
+        <h2>OpenGL 3D Environment</h2>
+        <p id="project-description">A full environment created completely with OpenGL. Includes textures, a skybox, multiple 3D models, and player controls. Features a small game that requires you to find the treasure, then a magical lion will grant you infinite golden pyramids to place around the map.</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/OpenGL-Pyramids" class="button">GitHub</a>
+          <a href="https://ramiwil.github.io/OpenGL-Pyramids/" class="button">Project Link</a>
+        </div>
+      </div>
+  
+      <div>
+        <h2>OpenGL Paint</h2>
+        <p id="project-description">Provides a canvas for you to use to draw whatever you like. Has a variety of brushes including different colors, shapes and sizes. The "Mufasa" button stamps a lion made of triangles on the canvas. Includes the option to draw while mirrored across the x-axis, y-axis, or both.</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/OpenGL-Paint" class="button">GitHub</a>
+          <a href="https://ramiwil.github.io/OpenGL-Paint/" class="button">Project Link</a>
+        </div>
+      </div>
+  
+      <div>
+        <h2>Vector Evaluator</h2>
+        <p id="project-description">Carries out vector operations using HTML and Javascript. Includes add, subtract, divide, multiply, magnitude, normalize, angle-between, and area-between operations. Visually displays the result on the canvas.</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/Vector-Evaluator" class="button">GitHub</a>
+          <a href="https://ramiwil.github.io/Vector-Evaluator/" class="button">Project Link</a>
+        </div>
+      </div>
+  
+      <div>
+        <h2>Golf Dash</h2>
+        <p id="project-description">Mini-Golf game designed for iOS using XCode and Unity</p>
+        <div id="links">
+          <a href="https://github.com/ramiwil/GolfDash" class="button">GitHub</a>
+          <!-- <a href="/" class="button">Project Link</a> -->
+        </div>
+      </div>
+  
+    </div>
+  </div>
+
+  <div id="resume" class="tab" style="display:none">
+    <h2>Resume</h2>
+    <p>Resume entry 1</p>
+  </div>
+
+
+  <script>
+    var currentTab = "about";
+    var buttonStyle = "14px 14px 27px #f6eee2, -14px -14px 27px #fffcf0";
+    var selectedButtonStyle = "inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0";
+
+    function hover(tabName) {
+      const tab1 = document.querySelector('#about-button');
+      const tab2 = document.querySelector('#projects-button');
+      const tab3 = document.querySelector('#resume-button');
+
+      if (tabName == "about") {
+        tab1.style.boxShadow = selectedButtonStyle;
+      } else if (tabName == "projects") {
+        tab2.style.boxShadow =  selectedButtonStyle;
+      } else if (tabName == "resume") {
+        tab3.style.boxShadow = selectedButtonStyle;
+      }
+    }
+
+    function buttonReset(tabName) {
+      const tab1 = document.querySelector('#about-button');
+      const tab2 = document.querySelector('#projects-button');
+      const tab3 = document.querySelector('#resume-button');
+
+      if (currentTab != tabName) {
+        if (tabName == "about") {
+          tab1.style.boxShadow = buttonStyle;
+        } else if (tabName == "projects") {
+          tab2.style.boxShadow =  buttonStyle;
+        } else if (tabName == "resume") {
+          tab3.style.boxShadow = buttonStyle;
+        }
+      }
+      
+    }
+
+    function openTab(tabName) {
+      var i, x;
+      currentTab = tabName;
+      const tab1 = document.querySelector('#about-button');
+      const tab2 = document.querySelector('#projects-button');
+      const tab3 = document.querySelector('#resume-button');
+
+      if (tabName == "about") {
+        tab1.style.color = "red";
+        tab1.style.boxShadow = selectedButtonStyle;
+        
+        tab2.style.color = "";
+        tab2.style.boxShadow =  buttonStyle;
+
+        tab3.style.color = "";
+        tab3.style.boxShadow = buttonStyle;
+      } else if (tabName == "projects") {
+        tab1.style.color = "";
+        tab1.style.boxShadow = buttonStyle;
+        
+        tab2.style.color = "red";
+        tab2.style.boxShadow =  selectedButtonStyle;
+
+        tab3.style.color = "";
+        tab3.style.boxShadow = buttonStyle;
+      } else if (tabName == "resume") {
+        tab1.style.color = "";
+        tab1.style.boxShadow = buttonStyle;
+        
+        tab2.style.color = "";
+        tab2.style.boxShadow =  buttonStyle;
+
+        tab3.style.color = "red";
+        tab3.style.boxShadow = selectedButtonStyle;
+      }
+
+
+      x = document.getElementsByClassName("tab");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+
+      document.getElementById(tabName).style.display = "block";
+
+    }
+
+  </script>
+
 </body>
 </html>
