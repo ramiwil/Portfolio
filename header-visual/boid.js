@@ -1,3 +1,47 @@
+const flock = [];
+
+function setup() {
+  var width = document.getElementById('header').offsetWidth;
+  var height = document.getElementById('header').offsetHeight;
+
+  var canvas = createCanvas(windowWidth, height);
+  canvas.position(0, 0);
+  canvas.style('z-index', '-1');
+
+  let boid_count = 250;
+  
+  
+
+  fill(0);
+  stroke(0)
+  rect(0, 0, windowWidth, height);
+
+  for (let i = 0; i < boid_count; i++) {
+    flock.push(new Boid());
+  }
+  
+  
+}
+
+function draw() {
+  background(254, 246, 233);
+
+  for (let boid of flock) {
+    boid.edges();
+    boid.flock(flock);
+    boid.update();
+    boid.show();
+  }
+
+}
+
+function windowResized() {
+    var height = document.getElementById('header').offsetHeight;
+    resizeCanvas(windowWidth, height);
+}
+
+
+
 class Boid {
     constructor() {
       this.position = createVector(random(width), random(height));
@@ -106,9 +150,10 @@ class Boid {
     }
   
     show() {
-        strokeWeight(4);
-
-        stroke(this.position.x, this.position.x, this.position.x);
+        strokeWeight(1.5);
+        // line(this.position.x, this.position.y, 0.5*this.position.x - this.position.y , 0.1*this.position.y - this.position.y )
+        // strokeWeight(1);
+        stroke(0, 0, 0);
         point(this.position.x, this.position.y);
       
     }
