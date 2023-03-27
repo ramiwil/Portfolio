@@ -150,7 +150,7 @@ class Boid {
     }
   
     show() {
-        strokeWeight(1.5);
+        strokeWeight(4);
         // line(this.position.x, this.position.y, 0.5*this.position.x - this.position.y , 0.1*this.position.y - this.position.y )
         // strokeWeight(1);
         stroke(0, 0, 0);
