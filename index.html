@@ -6,8 +6,8 @@
 
   <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
 
-  <!-- <script language="javascript" type="text/javascript" src="header-visual/boid.js"></script> -->
-  <script language="javascript" type="text/javascript" src="header-visual/line-wave.js"></script>
+  <script language="javascript" type="text/javascript" src="header-visual/boid.js"></script>
+  <!-- <script language="javascript" type="text/javascript" src="header-visual/line-wave.js"></script> -->
 
 
   <link rel="stylesheet" href="index.css">
@@ -30,9 +30,9 @@
 
 
   <div id="button-bar">
-    <button id="about-button" onmouseleave="buttonReset('about')" onmouseover="hover('about')" onclick="openTab('about')" style="color: red; box-shadow: inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0">About</button>
-    <button id="projects-button" onmouseleave="buttonReset('projects')" onmouseover="hover('projects')" onclick="openTab('projects')">Projects</button>
-    <button id="resume-button" onmouseleave="buttonReset('resume')" onmouseover="hover('resume')" onclick="openTab('resume')">Resume</button>
+    <button id="about-button" onclick="openTab('about')" style="color: red; box-shadow: inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0">About</button>
+    <button id="projects-button" onclick="openTab('projects')">Projects</button>
+    <button id="resume-button" onclick="openTab('resume')">Resume</button>
   </div>
 
   <div id="about" class="tab">
@@ -62,6 +62,7 @@
         </div>
         
       </div>
+
   
   
       <div>
@@ -150,36 +151,6 @@
     var buttonStyle = "14px 14px 27px #f6eee2, -14px -14px 27px #fffcf0";
     var selectedButtonStyle = "inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0";
 
-    function hover(tabName) {
-      const tab1 = document.querySelector('#about-button');
-      const tab2 = document.querySelector('#projects-button');
-      const tab3 = document.querySelector('#resume-button');
-
-      if (tabName == "about") {
-        tab1.style.boxShadow = selectedButtonStyle;
-      } else if (tabName == "projects") {
-        tab2.style.boxShadow =  selectedButtonStyle;
-      } else if (tabName == "resume") {
-        tab3.style.boxShadow = selectedButtonStyle;
-      }
-    }
-
-    function buttonReset(tabName) {
-      const tab1 = document.querySelector('#about-button');
-      const tab2 = document.querySelector('#projects-button');
-      const tab3 = document.querySelector('#resume-button');
-
-      if (currentTab != tabName) {
-        if (tabName == "about") {
-          tab1.style.boxShadow = buttonStyle;
-        } else if (tabName == "projects") {
-          tab2.style.boxShadow =  buttonStyle;
-        } else if (tabName == "resume") {
-          tab3.style.boxShadow = buttonStyle;
-        }
-      }
-      
-    }
 
     function openTab(tabName) {
       var i, x;
