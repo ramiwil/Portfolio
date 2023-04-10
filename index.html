@@ -1,204 +1,291 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="en">
+
 <head>
-  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
-
-  <script language="javascript" type="text/javascript" src="header-visual/boid.js"></script>
-  <!-- <script language="javascript" type="text/javascript" src="header-visual/line-wave.js"></script> -->
-
-
-  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-social@2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 </head>
+
 <body>
+  <nav class="navbar box" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <div class="columns navbar-item">
+        <div class="column">
+          <p class="title is-size-1 has-text-danger">Rami Wilson</p>
+          <p class="subtitle">Computer Science @ UCSC</p>
+        </div>
 
-  <div class="header" id="header">
-    <div class="title">
-      <p class="first-name">Rami</p>
-      <p class="last-name">Wilson</p>
+      </div>
     </div>
-    
 
-    <div class="descriptor">
-      <h2>Computer Science at University of California, Santa Cruz</h2>
+    <div class="navbar-menu">
+      <div class="navbar-start">
+        <!-- navbar items -->
+      </div>
+      <div class="navbar-end">
+        <!-- navbar items -->
+        <div class="navbar-item">
+          <a href="https://docs.google.com/document/d/1GfXiJaQkBBGgT0vexU6pjJ2kGKUD3CHZF04tS2VYHmc/edit" target="_blank"
+            class="button is-outlined is-medium is-rounded is-github" style="margin: 5px;">
+            <span class="icon">
+              <i class="fa-solid fa-file"></i>
+            </span>
+          </a>
+
+          <a href="https://www.instagram.com/rami_wil/" target="_blank"
+            class="button is-outlined is-medium is-rounded is-instagram" style="margin: 5px;">
+            <span class="icon">
+              <i class="fab fa-instagram fa-lg"></i>
+            </span>
+          </a>
+          <a href="https://twitter.com/rami__wilson" target="_blank"
+            class="button is-outlined is-medium is-rounded is-twitter" style="margin: 5px;">
+            <span class="icon">
+              <i class="fab fa-twitter fa-lg"></i>
+            </span>
+          </a>
+          <a href="https://github.com/ramiwil" target="_blank" class="button is-outlined is-medium is-rounded is-github"
+            style="margin: 5px;">
+            <span class="icon">
+              <i class="fab fa-github fa-lg"></i>
+            </span>
+          </a>
+        </div>
+
+      </div>
     </div>
-  </div>
+
+  </nav>
 
 
-
-  <div id="button-bar">
-    <button id="about-button" onclick="openTab('about')" style="color: red; box-shadow: inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0">About</button>
-    <button id="projects-button" onclick="openTab('projects')">Projects</button>
-    <button id="resume-button" onclick="openTab('resume')">Resume</button>
-  </div>
-
-  <div id="about" class="tab">
-    <h2 id="subtitle">About</h2>
-    <p>I am a Computer Science student at UCSC. 
-      I have a keen interest in machine learning applications, graphics, data science and visualization, as well as general software development.</p>
-  </div>
+  <section class="section">
+    <h1 class="title">About</h1>
+    <p>I completed have completed a B.S. in Computer Science and currently pursuing a M.S. in Computer Science and
+      Engineering from the University of California, Santa
+      Cruz. I have a keen
+      interest in machine learning applications, graphics,
+      data science and visualization, as well as general software and app development. Avid jazz drummer and vibraphone
+      player!</p>
+  </section>
 
 
-  <div id="projects" class="tab" style="display:none">
-    <h2 id="subtitle">Projects</h2>
-    <div id="project-list">
-      <div>
-        <h2>Spotify Match</h2>
-        <p id="project-description">Using React Native, Express.js, and PostgreSQL, created a dating application that allows users to meet each other based on their compatibility in music tastes. Implemented full state management system using Redux Toolkit and architected front-end and back-end for several screens in the app</p>
-        <div id="links">
-          <a href="https://github.com/AmandeepSingh789/Spotify-Match" class="button">GitHub</a>
-        </div>
-        
-      </div>
-      <div>
-        <h2>Neo-Riemannian Tonnetz Visualization</h2>
-        <p id="project-description">Implemented in p5.js and visualizes P, L, and R transformations on major and minor triads according to Neo-Riemannian theory, visualizing path between non-diatonic triads on dynamically generated grid given any root note</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/tonnetz_js" class="button">GitHub</a>
-          <a href="https://ramiwil.github.io/tonnetz_js/" class="button">Project Link</a>
-        </div>
-        
-      </div>
+  <section class="section">
+    <h1 class="title">Projects</h1>
 
-  
-  
-      <div>
-        <h2>Connect-4 Minimax / Expectimax Agent</h2>
-        <p id="project-description">Implemented in Python and uses minimax and expectimax to choose the most optimal decision. Optimized to run up to 5-6 levels deep in search tree in reasonable time by use of partial pre-computed heuristics</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/connect-four-ai" class="button">GitHub</a>
-          <!-- <a href="/" class="button">Project Link</a> -->
+    <div class="tile is-ancestor">
+      <div class="tile is-vertical">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <!-- <b>Bulma Default Gap:</b> -->
+            <article class="tile is-child notification is-danger has-text-centered">
+              <p class="title has-text-left">Spotify Match</p>
+              <p class="subtitle has-text-left">Using React Native, Express.js, and PostgreSQL, created a
+                dating
+                application that allows users to meet each other based on their compatibility in music
+                tastes. Implemented full state management system using Redux Toolkit and architected
+                front-end and back-end for several screens in the app</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-primary has-text-black has-text-centered">
+              <p class="title has-text-left">Neo-Riemannian Tonnetz Visualization</p>
+              <p class="subtitle has-text-left">Implemented in p5.js and visualizes P, L, and R
+                transformations on major
+                and minor triads according to Neo-Riemannian theory, visualizing path between
+                non-diatonic triads on dynamically generated grid given any root note</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
-  
-      <div>
-        <h2>Haskell Interpreter</h2>
-        <p id="project-description">An evaluator for a subset of the functional programming language Haskell. Supports abstractions, arithmetic evaluation, lambda expressions, etc.</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/Haskell-Nano-Interpreter" class="button">GitHub</a>
-          <!-- <a href="/" class="button">Project Link</a> -->
+      <div class="tile is-vertical">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-info has-text-centered">
+              <p class="title has-text-left">Connect-4 Minimax / Expectimax Agent</p>
+              <p class="subtitle has-text-left">Implemented in Python and uses minimax and expectimax to
+                choose the most
+                optimal decision. Optimized to run up to 5-6 levels deep in search tree in reasonable
+                time by use of partial pre-computed heuristics</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-warning has-text-centered">
+              <p class="title has-text-left">Haskell Interpreter</p>
+              <p class="subtitle has-text-left">An evaluator for a subset of the functional programming
+                language
+                Haskell. Supports abstractions, arithmetic evaluation, lambda expressions, etc.</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-primary has-text-black has-text-centered">
+              <p class="title has-text-left">Three.js Environment</p>
+              <p class="subtitle has-text-left">A Three JS environment with full controls that puts you in
+                the middle of
+                a fully 3D environment. Includes positional audio, animated 3D models working together
+                simultaneously (GLTF, FBX, etc.), animation, HDRI scanning, cube maps, and 3D scanned
+                models.</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-info has-text-centered ">
+              <p class="title has-text-left">Vector Evaluator</p>
+              <p class="subtitle has-text-left">Carries out vector operations using HTML and Javascript.
+                Includes add,
+                subtract, divide, multiply, magnitude, normalize, angle-between, and area-between
+                operations. Visually displays the result on the canvas.</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+
+          </div>
         </div>
       </div>
-  
-      <div>
-        <h2>Three.js Environment</h2>
-        <p id="project-description">A Three JS environment with full controls that puts you in the middle of a fully 3D environment. Includes positional audio, animated 3D models working together simultaneously (GLTF, FBX, etc.), animation, HDRI scanning, cube maps, and 3D scanned models.</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/ThreeJS-StreetRave" class="button">GitHub</a>
-          <a href="https://ramiwil.github.io/ThreeJS-StreetRave/" class="button">Project Link</a>
+      <div class="tile is-vertical">
+        <div class="tile">
+          <div class="tile is-parent is-vertical">
+            <article class="tile is-child notification is-warning has-text-centered">
+              <p class="title has-text-left">OpenGL Shader</p>
+              <p class="subtitle has-text-left">A shader created using OpenGL lighting algorithms.
+                Includes diffuse,
+                specular, and ambient lights, as well as a spotlight. Features a perspective change
+                slider and the lights affect 3 different models to fully see the lighting effects.</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-danger has-text-centered">
+              <p class="title has-text-left">OpenGL 3D Environment</p>
+              <p class="subtitle has-text-left">A full environment created completely with OpenGL.
+                Includes textures, a
+                skybox, multiple 3D models, and player controls. Features a small game that requires you
+                to find the treasure, then a magical lion will grant you infinite golden pyramids to
+                place around the map.</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-info has-text-centered">
+              <p class="title has-text-left">OpenGL Paint</p>
+              <p class="subtitle has-text-left">Provides a canvas for you to use to draw whatever you
+                like. Has a
+                variety of brushes including different colors, shapes and sizes. The "Mufasa" button
+                stamps a lion made of triangles on the canvas. Includes the option to draw while
+                mirrored across the x-axis, y-axis, or both.</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+            <article class="tile is-child notification is-warning has-text-centered">
+              <p class="title has-text-left">Golf Dash</p>
+              <p class="subtitle has-text-left">Mini-Golf game designed for iOS using XCode and Unity</p>
+
+              <a class="button is-medium is-rounded is-github" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-github"></i>
+                </span>
+                <span>GitHub</span>
+              </a>
+            </article>
+          </div>
         </div>
       </div>
-  
-      <div>
-        <h2>OpenGL Shader</h2>
-        <p id="project-description">A shader created using OpenGL lighting algorithms. Includes diffuse, specular, and ambient lights, as well as a spotlight. Features a perspective change slider and the lights affect 3 different models to fully see the lighting effects.</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/OpenGL-LightingSample" class="button">GitHub</a>
-          <a href="https://ramiwil.github.io/OpenGL-LightingSample/" class="button">Project Link</a>
-        </div>
-      </div>
-  
-      <div>
-        <h2>OpenGL 3D Environment</h2>
-        <p id="project-description">A full environment created completely with OpenGL. Includes textures, a skybox, multiple 3D models, and player controls. Features a small game that requires you to find the treasure, then a magical lion will grant you infinite golden pyramids to place around the map.</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/OpenGL-Pyramids" class="button">GitHub</a>
-          <a href="https://ramiwil.github.io/OpenGL-Pyramids/" class="button">Project Link</a>
-        </div>
-      </div>
-  
-      <div>
-        <h2>OpenGL Paint</h2>
-        <p id="project-description">Provides a canvas for you to use to draw whatever you like. Has a variety of brushes including different colors, shapes and sizes. The "Mufasa" button stamps a lion made of triangles on the canvas. Includes the option to draw while mirrored across the x-axis, y-axis, or both.</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/OpenGL-Paint" class="button">GitHub</a>
-          <a href="https://ramiwil.github.io/OpenGL-Paint/" class="button">Project Link</a>
-        </div>
-      </div>
-  
-      <div>
-        <h2>Vector Evaluator</h2>
-        <p id="project-description">Carries out vector operations using HTML and Javascript. Includes add, subtract, divide, multiply, magnitude, normalize, angle-between, and area-between operations. Visually displays the result on the canvas.</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/Vector-Evaluator" class="button">GitHub</a>
-          <a href="https://ramiwil.github.io/Vector-Evaluator/" class="button">Project Link</a>
-        </div>
-      </div>
-  
-      <div>
-        <h2>Golf Dash</h2>
-        <p id="project-description">Mini-Golf game designed for iOS using XCode and Unity</p>
-        <div id="links">
-          <a href="https://github.com/ramiwil/GolfDash" class="button">GitHub</a>
-          <!-- <a href="/" class="button">Project Link</a> -->
-        </div>
-      </div>
-  
     </div>
-  </div>
-
-  <div id="resume" class="tab" style="display:none">
-    <h2 id="subtitle">Resume</h2>
-    <iframe id="googledoc" src="https://docs.google.com/document/d/e/2PACX-1vQp-IgdyluPoqAa8zjAXkuMHrIUJawPBNIaiAKg6lvD8zPoZ4O-MkuDi2e6_yCGqZ2SxusdgLqLPE-D/pub?embedded=true"></iframe>
-  </div>
 
 
-  <script>
-    var currentTab = "about";
-    var buttonStyle = "14px 14px 27px #f6eee2, -14px -14px 27px #fffcf0";
-    var selectedButtonStyle = "inset 14px 14px 27px #f6eee2, inset -14px -14px 27px #fffcf0";
+  </section>
+
+  <section class="section has-text-centered is-medium">
+    <a href="https://docs.google.com/document/d/1GfXiJaQkBBGgT0vexU6pjJ2kGKUD3CHZF04tS2VYHmc/edit"
+      class="button is-danger is-rounded is-large p-6" target="_blank">Resume</a>
+  </section>
 
 
-    function openTab(tabName) {
-      var i, x;
-      currentTab = tabName;
-      const tab1 = document.querySelector('#about-button');
-      const tab2 = document.querySelector('#projects-button');
-      const tab3 = document.querySelector('#resume-button');
-
-      if (tabName == "about") {
-        tab1.style.color = "red";
-        tab1.style.boxShadow = selectedButtonStyle;
-        
-        tab2.style.color = "";
-        tab2.style.boxShadow =  buttonStyle;
-
-        tab3.style.color = "";
-        tab3.style.boxShadow = buttonStyle;
-      } else if (tabName == "projects") {
-        tab1.style.color = "";
-        tab1.style.boxShadow = buttonStyle;
-        
-        tab2.style.color = "red";
-        tab2.style.boxShadow =  selectedButtonStyle;
-
-        tab3.style.color = "";
-        tab3.style.boxShadow = buttonStyle;
-      } else if (tabName == "resume") {
-        tab1.style.color = "";
-        tab1.style.boxShadow = buttonStyle;
-        
-        tab2.style.color = "";
-        tab2.style.boxShadow =  buttonStyle;
-
-        tab3.style.color = "red";
-        tab3.style.boxShadow = selectedButtonStyle;
-      }
-
-
-      x = document.getElementsByClassName("tab");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-
-      document.getElementById(tabName).style.display = "block";
-
-    }
-
-  </script>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <div class="m-5">
+        <a href="https://www.linkedin.com/in/rami-wilson-31b7781a7/" target="_blank"
+          class="button is-outlined is-medium is-rounded is-linkedin" style="margin: 5px;">
+          <span class="icon">
+            <i class="fab fa-linkedin fa-lg"></i>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/rami_wil/" target="_blank"
+          class="button is-outlined is-medium is-rounded is-instagram" style="margin: 5px;">
+          <span class="icon">
+            <i class="fab fa-instagram fa-lg"></i>
+          </span>
+        </a>
+        <a href="https://twitter.com/rami__wilson" target="_blank"
+          class="button is-outlined is-medium is-rounded is-twitter" style="margin: 5px;">
+          <span class="icon">
+            <i class="fab fa-twitter fa-lg"></i>
+          </span>
+        </a>
+        <a href="https://github.com/ramiwil" target="_blank" class="button is-outlined is-medium is-rounded is-github"
+          style="margin: 5px;">
+          <span class="icon">
+            <i class="fab fa-github fa-lg"></i>
+          </span>
+        </a>
+      </div>
+      <p>
+        Email: <a href="mailto:ramiwilson60@gmail.com">ramiwilson60@gmail.com</a>
+      </p>
+      <p>
+        California, United States
+      </p>
+    </div>
+  </footer>
 
 </body>
+
 </html>
